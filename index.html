@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script type="module">
+      //const url = "https://www.imooc.com/api/http/search/suggest?words=js";
+      //const xhr = new XMLHttpRequest();
+
+      //xhr.addEventListener("load", () => {
+      //  if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 304) {
+      //    console.log(xhr.response);
+      //  }
+      //});
+
+      //xhr.open("GET", url, true);
+
+      //xhr.send(null);
+
+      import { ajax, get, post, getJSON } from "./js/index.js";
+
+
+      //console.log(get, post, getJSON);
+      //console.log(ajax);
+
+      //const url = "https://www.imooc.com/api/http/search/suggest?words=js";
+      //const url = "https://www.iimooc.com/api/http/search/suggest?words=js";
+      const url = 'https://www.imooc.com/api/http/json/search/suggest?words=js';
+
+      //const url = "./4.html";
+
+      //const xhr = ajax(url, {
+      //  method: "POST",
+      //  params: {
+      //    a: 10,
+      //  },
+
+      //  data:{
+      //    username:"yunmu",
+      //    age:18
+      //  },
+
+      //  responseType:"json",
+
+      //  cotentType:"application/json",
+        
+      //  //timeoutTime:10,
+
+      //  success(data, xhr) {
+      //    console.log(data);
+      //    console.log(xhr);
+      //  },
+
+      //  httpCodeError(status, xhr) {
+      //    console.log("HTTP ERROR");
+      //    console.log(status);
+      //    console.log(xhr);
+      //  },
+
+      //  error(xhr) {
+      //    console.log("error", xhr);
+      //  },
+
+      //  abort(xhr) {
+      //    console.log("abort", xhr);
+      //  },
+
+      //  timeout(xhr) {
+      //    console.log("timeout", xhr);
+      //  },
+      //});
+
+      getJSON(url,{
+        success(data){
+          console.log(data);
+        }
+      })
+
+      //xhr.abort();
+    </script>
+  </body>
+</html>
